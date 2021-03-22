@@ -136,6 +136,9 @@
   margin-bottom: 50px;
 }
 @media screen and (max-width: 500px) {
+  #content .logo {
+    display: none;
+  }
   #history-about-block .description {
     width: 95%;
   }
