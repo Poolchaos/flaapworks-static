@@ -87,6 +87,13 @@
   scroll-behavior: smooth;
   overflow-y: hidden;
 }
+@media screen and (max-width: 450px) {
+  .content--block {
+    min-height: calc(100vh - 100px);
+    height: unset;
+    scroll-snap-align: unset;
+  }
+}
 .content--block:first-child,
 .content--block:last-child {
   margin: auto;
@@ -136,9 +143,6 @@
   margin-bottom: 50px;
 }
 @media screen and (max-width: 500px) {
-  #content .logo {
-    display: none;
-  }
   #history-about-block .description {
     width: 95%;
   }
@@ -163,6 +167,9 @@
 /*-- ---------------------- TESTIMONIALS START ---------------------- --*/
 #testimonial-block .testimony {
   margin: 10px 0;
+}
+#testimonial-block .testimony .author {
+  flex-direction: row;
 }
 @media screen and (max-width: 749px) {
   #testimonial-block .testimony {
