@@ -1,0 +1,195 @@
+/*------------------------------------*\
+  #GLOBAL SETTINGS
+\*------------------------------------*/
+/*-- ---------------------- HEADER START ---------------------- --*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.nav {
+  display: none;
+  min-height: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (min-width: 750px) {
+  .nav--wide {
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 749px) {
+  .nav--thin {
+    display: flex !important;
+  }
+}
+.nav--thin .identity {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.nav--thin .identity .logo {
+  height: 40px !important;
+}
+.nav--thin .burger {
+  position: relative;
+  text-align: left !important;
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: none;
+  text-transform: initial;
+  margin-right: 20px;
+}
+.nav--thin .burger--handle {
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 3px;
+  text-align: center;
+}
+.nav--thin .burger--items {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 95px;
+  border-radius: 3px;
+  background-color: var(--gray);
+  padding: 5px 10px;
+  display: none;
+}
+.nav--thin .burger--items.active {
+  display: flex;
+}
+.nav--thin .burger--items a {
+  width: 100%;
+  color: var(--white) !important;
+  font-weight: 100;
+  text-transform: unset;
+  padding: 5px 0;
+}
+/*-- ---------------------- HEADER END ---------------------- --*/
+/*-- ---------------------- FOOTER START ---------------------- --*/
+#footer .nav--thin .logo {
+  width: 40px !important;
+  margin: 10px auto;
+}
+/*-- ---------------------- FOOTER END ---------------------- --*/
+/*-- ###################### VIEWS ###################### --*/
+#content {
+  margin-top: 50px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  scroll-snap-type:y mandatory; /* mandatory|proximity */
+}
+.content--block {
+  height: calc(100vh - 100px);
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+.content--block:first-child,
+.content--block:last-child {
+  margin: auto;
+}
+#contact .content--block {
+  min-height: calc(100vh - 200px);
+  padding: 50px 0;
+}
+#home,
+#services,
+#explore,
+#about,
+#contact {
+  text-align: center;
+}
+
+#about #profile-block,
+#about #testimonial-block {
+  max-width: 800px;
+  margin: auto;
+}
+/*-- ---------------------- HOME END ---------------------- --*/
+/*-- ---------------------- SERVICES START ---------------------- --*/
+.services--selected {
+  max-width: 650px;
+  margin: auto;
+}
+#services #hexcontainer {
+  margin: 30px 0 50px 0;
+  max-width: 650px;
+}
+#services #hexcontainer .hex1 {
+  margin: 10px;
+}
+#services .description {
+  min-height: 90px;
+}
+/*-- ---------------------- SERVICES END ---------------------- --*/
+/*-- ---------------------- EXPLORE START ---------------------- --*/
+#explore .logo {
+  width: 150px;
+  height: 150px;
+}
+/*-- ---------------------- EXPLORE END ---------------------- --*/
+/*-- ---------------------- ABOUT START ---------------------- --*/
+#history-about-block #hexcontainer {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 500px) {
+  #history-about-block .description {
+    width: 95%;
+  }
+  #history-about-block .description .company--wrap {
+    flex-direction: column;
+  }
+  #history-about-block .description .company--type {
+    align-self: flex-start !important;
+  }
+}
+#history-about-block .description--left, .text--left {
+  text-align: left;
+}
+#history-about-block .logo {
+  width: 150px;
+  height: 150px;
+}
+#history-about-block a {
+  color: var(--gray);
+}
+/*-- ---------------------- ABOUT END ---------------------- --*/
+/*-- ---------------------- TESTIMONIALS START ---------------------- --*/
+#testimonial-block .testimony {
+  margin: 10px 0;
+}
+@media screen and (max-width: 749px) {
+  #testimonial-block .testimony {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #testimonial-block .testimony {
+    width: 95%;
+  }
+}
+#testimonials .profile {
+  width: 100px;
+  height: 100px;
+  max-height: 100px;
+  border-radius: 100%;
+}
+#testimonials .description {
+  color: var(--gray);
+}
+/*-- ---------------------- TESTIMONIALS END ---------------------- --*/
+.btn--back {
+  max-width: 30px;
+  min-width: 30px;
+  margin: 15px;
+  border: 0px;
+  background: var(--gray);
+  color: var(--white);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
