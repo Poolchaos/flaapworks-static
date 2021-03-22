@@ -187,28 +187,14 @@ body::-webkit-scrollbar-track {
 div::-webkit-scrollbar-track {
   background: #ffffff;
 }
- 
-#content::-webkit-scrollbar-thumb {
-  background-color: var(--red);
-  outline: 1px solid var(--red);
-}
- 
-div::-webkit-scrollbar-thumb {
-  background-color: var(--gray);
-  outline: 1px solid var(--gray);
+   
+div::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.0);
+  outline: 1px solid rgba(0, 0, 0, 0.0);
 }
 
-@media screen and (max-width: 500px) {
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0);
-  }
-  div::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.0);
-  }
-   
-  div::-webkit-scrollbar-thumb,
-  body::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.0)!important;
-    outline: 1px solid rgba(0, 0, 0, 0.0)!important;
-  }
+body:hover #content::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  outline: 1px solid var(--red);
 }
